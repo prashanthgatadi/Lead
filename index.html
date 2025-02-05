@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web To Lead Form</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="lead.js"></script>
   </head>
   <body>
@@ -21,6 +22,11 @@
         value="https://prashanthgatadi.github.io/Lead/thanks.html"
       />
       <input type="hidden" name="Lead_Date__c" class="outputdate" />
+      <input
+        type="hidden"
+        name="captcha_settings"
+        value='{"keyname":"google","fallback":"true","orgId":"00DdM00000IrgZq","ts":""}'
+      />
       <label for="first_name">First Name</label
       ><input
         id="first_name"
@@ -59,7 +65,11 @@
           size="12"
           type="text" /></span
       ><br /> -->
-
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LeUT80qAAAAAPfQsnfEZcrZzNO6vGAi02XxqFid"
+      ></div>
+      <br />
       <input type="submit" name="submit" class="submit" />
     </form>
   </body>
